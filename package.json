@@ -1,0 +1,23 @@
+{
+    "name": "bamazon",
+    "version": "1.0.0",
+    "description": "A node-based storefront application built using Node.js and MySQL.",
+    "main": "bamazonCustomer.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ashtinannb/bamazon.git"
+    },
+    "author": "ashtin",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ashtinannb/bamazon/issues"
+    },
+    "homepage": "https://github.com/ashtinannb/bamazon#readme",
+    "dependencies": {
+        "inquirer": "^6.0.0",
+        "mysql": "^2.15.0"
+    }
+}
