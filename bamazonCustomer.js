@@ -37,10 +37,6 @@ function loadProducts() {
 }
 
 
-
-
-
-
 /// function for asking customer 
 function promptCustomer(inventory) {
   inquirer
@@ -71,10 +67,6 @@ function promptCustomer(inventory) {
 }
 
 
-
-
-
-
 // function for product quantity 
 function promptQuantity(product) {
   inquirer
@@ -83,12 +75,12 @@ function promptQuantity(product) {
         type: "input",
         name: "quantity",
         message: "How many would you like? [Quit with Q]",
-        validate: function(val) {
+        validate: function (val) {
           return val > 0 || val.toLowerCase() === "q";
         }
       }
     ])
-    .then(function(val) {
+    .then(function (val) {
       Exit(val.quantity);
       var quantity = parseInt(val.quantity);
 
@@ -105,6 +97,41 @@ function promptQuantity(product) {
 }
 
 
+// function for buying 
+function buy(product, quantity) {
+  connection.query(
+    "UPDATE products SET stock_quantity = stock_quantity - ? WHERE item_id = ?",
+    [quantity, product.item_id],
+    function (err, res) {
+      // success is sweet
+      console.log("\nSuccessfully purchased " + quantity + " " + product.product_name + "'s!");
+      loadProducts();
+    }
+  );
+}
+
+
+// function for checking inventory
+function checkInventory(choiceId, inventory) {
+  for (var i = 0; i < inventory.length; i++) {
+    if (inventory[i].item_id === choiceId) {
+      // If a matching product is found, return the product
+      return inventory[i];
+    }
+  }
+  // or return null
+  return null;
+}
+
+
+// function for exit
+function Exit(choice) {
+  if (choice.toLowerCase() === "q") {
+    // Log a message and exit the current node process
+    console.log("Have a nice day!");
+    process.exit(0);
+  }
+}
 
 
 
