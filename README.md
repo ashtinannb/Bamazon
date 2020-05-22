@@ -11,6 +11,8 @@ This is a node-based application built using Node.js and MySQL.
 
 **2. In your CLI, initialize the app.**
  * *node bamazonCustomer.js*
+ <br>
+ 
 ![](https://github.com/ashtinannb/Bamazon/blob/master/init.png?raw=true)
 
 <br>
@@ -36,3 +38,6 @@ This is a node-based application built using Node.js and MySQL.
 <br>
 
 ![](https://github.com/ashtinannb/Bamazon/blob/master/quit.PNG?raw=true)
+
+## Built By:
+Ashtin Brannon
