@@ -12,3 +12,15 @@ var connection = mysql.createConnection({
     database: "bamazon"
 });
 
+
+// connect to mysql 
+connection.query("SELECT * FROM products", function (err, res) {
+    if (err) throw err;
+
+    // creates table in terminal, so freaking cool 
+    console.table(res);
+
+    // asking customer what they would like 
+    promptCustomer(res);
+});
+
