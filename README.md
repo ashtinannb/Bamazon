@@ -6,6 +6,7 @@ This is a node-based application built using Node.js and MySQL.
 **1. After establishing your server on MySQL, install your npms.** 
 * *npm install mysql*
 * *npm install require*
+* *npm console.table*
 
 <br>
 
