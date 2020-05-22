@@ -26,7 +26,7 @@ This is a node-based application built using Node.js and MySQL.
 
 <br>
 
-**4. If the product you selected is unavailable, you will be presented with an insuffint prompt.** 
+**4. If the product you selected is unavailable, you will be presented with an "insufficient quantity" prompt.** 
 
 <br>
 
